@@ -54,7 +54,7 @@ core/
 │   ├── event.py            ← Event model
 │   ├── tutor.py            ← Tutor model
 ```
-If in the future, we have more and more apps, the strucuture will probablly look like this:
+If in the future, we will have way more apps, the strucuture will likely look like this:
 ### 📦 Example Modular App Models Layout
 ```
 core/
