@@ -29,11 +29,11 @@ Then proceed to clone the repository.
 
 ### ✅ Step 1: Clone the Repository
 ### ✅ Step 2: (recommend) Create and Activate Virtual Environment
-    ```bash
-        python -m venv env
-        source env/bin/activate  # Mac/Linux
-        # Or on Windows: env\Scripts\activate
-    ```
+```bash
+    python -m venv env
+    source env/bin/activate  # Mac/Linux
+    # Or on Windows: env\Scripts\activate
+```
 Don't upload your venv (env) to github! (If you have do)
 Basically the way don't upload is already in .gitignore, so don't delete that file
 
