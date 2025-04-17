@@ -1,7 +1,7 @@
 # 🗂 Project Structure
 This document describes the main folder and file structure of the SMCCDhackathon Django project.
 Shuold be viewed after finishing all the prerequire (in README)
-
+```
 SMCCDhackathon/
 ├── campus_site/               # Main Django project configuration
 │   ├── __init__.py              # Init for campus_site module
@@ -28,6 +28,7 @@ SMCCDhackathon/
 ├── .gitignore                 # Git ignored files config
 ├── README.md                  # Main project instruction file
 └── PROJECT_STRUCTURE.md       # This file (project layout)
+```
 
 ## 🧩 Proposed App Structure
 
@@ -40,7 +41,10 @@ SMCCDhackathon/
 | `core` | Base models and reusable logic (abstract)| No UI                     | `ResourceEntity`, `CalendarEntity`          |
 
 ## 🏗 Models description
-[View models describtion](https://docs.google.com/document/d/1Y6XKusWbk3OGrOPl2z1UXW5Vl6ZkiCO_fYxj55chb2Y/edit?usp=sharing)
+[View full model description (Google Docs)](https://docs.google.com/document/d/1Y6XKusWbk3OGrOPl2z1UXW5Vl6ZkiCO_fYxj55chb2Y/edit?usp=sharing)
+
+### 📦 Currently Modular App Models Layout
+```
 core/
 ├── models/
 │   ├── __init__.py         ← all the sub models
@@ -49,14 +53,21 @@ core/
 │   ├── room.py             ← Room model
 │   ├── event.py            ← Event model
 │   ├── tutor.py            ← Tutor model
-
----
-
-## 🔑 Notes
-
-- `core/` can later be split into more apps (e.g., `resources/`, `calendar/`) if project grows  
-- Keep templates and static files inside each app or global folder depending on reuse  
-- Make sure `env/` is excluded from commits using `.gitignore`  
-- Use `requirements.txt` to record all external packages  
-
----
+```
+If in the future, we have more and more apps, the strucuture will probablly look like this:
+### 📦 Example Modular App Models Layout
+```
+core/
+├── models/
+│   ├── __init__.py             ← shared model imports
+│   ├── base.py                 ← ResourceEntity, CalendarEntity
+|
+resources/
+├── models.py                   ← Item model, optionally split
+|
+calendar/
+├── models.py                   ← Event, Tutor models
+|
+accounts/
+├── models.py                   ← CenterUser or custom auth models
+```
