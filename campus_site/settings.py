@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'resources',
     'rooms',
     'calendar',
-    'accounts',
+    'users',
 ]
 
 MIDDLEWARE = [
